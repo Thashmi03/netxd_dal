@@ -7,7 +7,3 @@ type Transaction struct{
 	Amount int64	     `json:"amount" bson:"amount"`
 	// Time time.Time	     `json:"time" bson:"time"`
 }
-
-type TResponse struct{
-	Transaction_id string `json:"transaction_id" bson:"transaction_id"`
-}
