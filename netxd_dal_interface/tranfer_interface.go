@@ -1,6 +1,7 @@
 package netxddalinterface
 
-import model "github.com/Thashmi03/transfer_model"
+import netxddalmodels "github.com/Thashmi03/netxd_dal/netxd_dal_models"
+
 type Itransact interface{
-	Transfer(detail *model.Transaction)(string,error)
+	Transfer(detail *netxddalmodels.Transaction)(string,error)
 }
