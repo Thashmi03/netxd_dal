@@ -23,7 +23,7 @@ func InitTransaction (ccollection *mongo.Collection,tcollection *mongo.Collectio
 	return &Transaction{ctx,client,tcollection,ccollection}
 }
 
-func (t*Transaction)Transfer(detail * tmodel.Transaction)(*tmodel,error){
+func (t*Transaction)Transfer(detail * tmodel.Transaction)(*tmodel.,error){
 	session,err:=t.client.StartSession()
 	if err!=nil{
 		log.Fatal(err)
