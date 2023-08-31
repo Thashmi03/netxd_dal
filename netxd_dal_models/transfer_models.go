@@ -7,3 +7,4 @@ type Transaction struct{
 	Amount int64	     `json:"amount" bson:"amount"`
 	// Time time.Time	     `json:"time" bson:"time"`
 }
+
