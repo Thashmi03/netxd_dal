@@ -8,6 +8,6 @@ type Transaction struct{
 	// Time time.Time	     `json:"time" bson:"time"`
 }
 
-type TransferResponse struct{
+type TResponse struct{
 	Transaction_id string `json:"transaction_id" bson:"transaction_id"`
 }
