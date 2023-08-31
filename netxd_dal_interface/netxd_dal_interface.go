@@ -1,6 +1,6 @@
 package netxddalinterface
 
-import netxddalmodels "banking_with_grpc/netxd_dal/netxd_dal_models"
+import netxddalmodels "github.com/Thashmi03/netxd_dal/netxd_dal_models"
 
 
 

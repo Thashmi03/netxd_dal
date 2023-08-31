@@ -1,8 +1,8 @@
 package netxddalservices
 
 import (
-	netxddalinterface "banking_with_grpc/netxd_dal/netxd_dal_interface"
-	netxddalmodels "banking_with_grpc/netxd_dal/netxd_dal_models"
+	netxddalinterface "github.com/Thashmi03/netxd_dal/netxd_dal_interface"
+	netxddalmodels "github.com/Thashmi03/netxd_dal/netxd_dal_models"
 	"context"
 	
 	"log"
