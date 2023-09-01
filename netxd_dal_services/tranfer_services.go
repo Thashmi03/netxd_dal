@@ -29,6 +29,7 @@ func (t*Transaction)Transfer(detail *netxddalmodels.Transaction)(string,error){
 	if err!=nil{
 		log.Fatal(err)
 	}
+	var newUser *netxddalmodels.Transaction
 	defer session.EndSession(context.Background())
 	_,err=session.WithTransaction(context.Background(),func(ctx mongo.SessionContext) (interface{}, error){
 		_, err := t.Customercollection.UpdateOne(ctx,
@@ -54,7 +55,7 @@ func (t*Transaction)Transfer(detail *netxddalmodels.Transaction)(string,error){
 			return "nil",err
 		}
 		
-	var newUser *netxddalmodels.Transaction
+	
 	query := bson.M{"_id": res.InsertedID}
 	
 	err3 := t.mongoCollection.FindOne(t.ctx, query).Decode(&newUser)
@@ -63,9 +64,6 @@ func (t*Transaction)Transfer(detail *netxddalmodels.Transaction)(string,error){
 	}
 	return newUser, nil
 	})
-	if err != nil {
-	return "failed", err
-	}
 
 	return "yes",nil
 }
